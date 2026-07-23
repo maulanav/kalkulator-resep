@@ -195,6 +195,27 @@ int main() {
 
             if (jumlah_resep > 0) {
                 tampilkanResep(daftar_resep[idx], jumlah_resep);
+
+                // Opsi setelah hitung
+                int opsi;
+                do {
+                    cout << "----------------------------------------\n";
+                    cout << "  1. Hitung resep lainnya\n";
+                    cout << "  2. Keluar\n";
+                    cout << "----------------------------------------\n";
+                    cout << "Pilihan: ";
+                    cin >> opsi;
+
+                    if (opsi == 1) {
+                        break; // kembali ke menu utama (loop luar)
+                    } else if (opsi == 2) {
+                        pilihan = 0; // set pilihan jadi 0 agar loop luar berhenti
+                        break;
+                    } else {
+                        cout << "\n[!] Pilihan tidak valid!\n";
+                    }
+                } while (true);
+
             } else {
                 cout << "\n[!] Jumlah resep harus lebih dari 0!\n";
             }
